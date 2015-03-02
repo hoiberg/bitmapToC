@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA50383C1AA371DD0090A1F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50383B1AA371DD0090A1F5 /* AppDelegate.swift */; };
+		FA50383E1AA371DD0090A1F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50383D1AA371DD0090A1F5 /* ViewController.swift */; };
+		FA5038401AA371DD0090A1F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA50383F1AA371DD0090A1F5 /* Images.xcassets */; };
+		FA5038431AA371DD0090A1F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5038411AA371DD0090A1F5 /* Main.storyboard */; };
+		FA50384F1AA371DD0090A1F5 /* BitmapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50384E1AA371DD0090A1F5 /* BitmapperTests.swift */; };
+		FA5038591AA3763B0090A1F5 /* DropZoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5038581AA3763B0090A1F5 /* DropZoneView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA5038491AA371DD0090A1F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA50382E1AA371DD0090A1F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA5038351AA371DD0090A1F5;
+			remoteInfo = Bitmapper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA5038361AA371DD0090A1F5 /* Bitmapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitmapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA50383A1AA371DD0090A1F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA50383B1AA371DD0090A1F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA50383D1AA371DD0090A1F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA50383F1AA371DD0090A1F5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FA5038421AA371DD0090A1F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA5038481AA371DD0090A1F5 /* BitmapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitmapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA50384D1AA371DD0090A1F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA50384E1AA371DD0090A1F5 /* BitmapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmapperTests.swift; sourceTree = "<group>"; };
+		FA5038581AA3763B0090A1F5 /* DropZoneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropZoneView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA5038331AA371DD0090A1F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA5038451AA371DD0090A1F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA50382D1AA371DD0090A1F5 = {
+			isa = PBXGroup;
+			children = (
+				FA5038381AA371DD0090A1F5 /* Bitmapper */,
+				FA50384B1AA371DD0090A1F5 /* BitmapperTests */,
+				FA5038371AA371DD0090A1F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA5038371AA371DD0090A1F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA5038361AA371DD0090A1F5 /* Bitmapper.app */,
+				FA5038481AA371DD0090A1F5 /* BitmapperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA5038381AA371DD0090A1F5 /* Bitmapper */ = {
+			isa = PBXGroup;
+			children = (
+				FA50383B1AA371DD0090A1F5 /* AppDelegate.swift */,
+				FA50383D1AA371DD0090A1F5 /* ViewController.swift */,
+				FA5038581AA3763B0090A1F5 /* DropZoneView.swift */,
+				FA50383F1AA371DD0090A1F5 /* Images.xcassets */,
+				FA5038411AA371DD0090A1F5 /* Main.storyboard */,
+				FA5038391AA371DD0090A1F5 /* Supporting Files */,
+			);
+			path = Bitmapper;
+			sourceTree = "<group>";
+		};
+		FA5038391AA371DD0090A1F5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA50383A1AA371DD0090A1F5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA50384B1AA371DD0090A1F5 /* BitmapperTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA50384E1AA371DD0090A1F5 /* BitmapperTests.swift */,
+				FA50384C1AA371DD0090A1F5 /* Supporting Files */,
+			);
+			path = BitmapperTests;
+			sourceTree = "<group>";
+		};
+		FA50384C1AA371DD0090A1F5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA50384D1AA371DD0090A1F5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA5038351AA371DD0090A1F5 /* Bitmapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA5038521AA371DD0090A1F5 /* Build configuration list for PBXNativeTarget "Bitmapper" */;
+			buildPhases = (
+				FA5038321AA371DD0090A1F5 /* Sources */,
+				FA5038331AA371DD0090A1F5 /* Frameworks */,
+				FA5038341AA371DD0090A1F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bitmapper;
+			productName = Bitmapper;
+			productReference = FA5038361AA371DD0090A1F5 /* Bitmapper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA5038471AA371DD0090A1F5 /* BitmapperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA5038551AA371DD0090A1F5 /* Build configuration list for PBXNativeTarget "BitmapperTests" */;
+			buildPhases = (
+				FA5038441AA371DD0090A1F5 /* Sources */,
+				FA5038451AA371DD0090A1F5 /* Frameworks */,
+				FA5038461AA371DD0090A1F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA50384A1AA371DD0090A1F5 /* PBXTargetDependency */,
+			);
+			name = BitmapperTests;
+			productName = BitmapperTests;
+			productReference = FA5038481AA371DD0090A1F5 /* BitmapperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA50382E1AA371DD0090A1F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Balancing Rock";
+				TargetAttributes = {
+					FA5038351AA371DD0090A1F5 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					FA5038471AA371DD0090A1F5 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = FA5038351AA371DD0090A1F5;
+					};
+				};
+			};
+			buildConfigurationList = FA5038311AA371DD0090A1F5 /* Build configuration list for PBXProject "Bitmapper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA50382D1AA371DD0090A1F5;
+			productRefGroup = FA5038371AA371DD0090A1F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA5038351AA371DD0090A1F5 /* Bitmapper */,
+				FA5038471AA371DD0090A1F5 /* BitmapperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA5038341AA371DD0090A1F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA5038401AA371DD0090A1F5 /* Images.xcassets in Resources */,
+				FA5038431AA371DD0090A1F5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA5038461AA371DD0090A1F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA5038321AA371DD0090A1F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA50383E1AA371DD0090A1F5 /* ViewController.swift in Sources */,
+				FA5038591AA3763B0090A1F5 /* DropZoneView.swift in Sources */,
+				FA50383C1AA371DD0090A1F5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA5038441AA371DD0090A1F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA50384F1AA371DD0090A1F5 /* BitmapperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA50384A1AA371DD0090A1F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA5038351AA371DD0090A1F5 /* Bitmapper */;
+			targetProxy = FA5038491AA371DD0090A1F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA5038411AA371DD0090A1F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA5038421AA371DD0090A1F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA5038501AA371DD0090A1F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA5038511AA371DD0090A1F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FA5038531AA371DD0090A1F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Bitmapper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FA5038541AA371DD0090A1F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Bitmapper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FA5038561AA371DD0090A1F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BitmapperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bitmapper.app/Contents/MacOS/Bitmapper";
+			};
+			name = Debug;
+		};
+		FA5038571AA371DD0090A1F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BitmapperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bitmapper.app/Contents/MacOS/Bitmapper";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA5038311AA371DD0090A1F5 /* Build configuration list for PBXProject "Bitmapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA5038501AA371DD0090A1F5 /* Debug */,
+				FA5038511AA371DD0090A1F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA5038521AA371DD0090A1F5 /* Build configuration list for PBXNativeTarget "Bitmapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA5038531AA371DD0090A1F5 /* Debug */,
+				FA5038541AA371DD0090A1F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FA5038551AA371DD0090A1F5 /* Build configuration list for PBXNativeTarget "BitmapperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA5038561AA371DD0090A1F5 /* Debug */,
+				FA5038571AA371DD0090A1F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA50382E1AA371DD0090A1F5 /* Project object */;
+}

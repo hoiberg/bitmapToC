@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B2D28E31-D337-4AC4-BB1D-6FD6F806E05A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Bitmapper</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>13293B10289B0015441D7C7AEB6177A72EE27AEB</key>
+		<string>https://github.com/hoiberg/bitmapToC.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Bitmapper.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>13293B10289B0015441D7C7AEB6177A72EE27AEB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/hoiberg/bitmapToC.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>13293B10289B0015441D7C7AEB6177A72EE27AEB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>13293B10289B0015441D7C7AEB6177A72EE27AEB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BitmapToC</string>
+		</dict>
+	</array>
+</dict>
+</plist>
