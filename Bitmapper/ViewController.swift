@@ -22,6 +22,7 @@ class ViewController: NSViewController, DropZoneDelegate {
         
         super.viewDidLoad()
 
+        // setup dropView
         dropView.registerForFileExtensions(["bmp"])
         dropView.defaultDragOperation = .Copy
         dropView.dropDelegate = self
@@ -30,6 +31,7 @@ class ViewController: NSViewController, DropZoneDelegate {
     
     override func viewWillAppear() {
         
+        // setup textView
         textView.font = NSFont(name: "Menlo", size: 11)
         
     }
@@ -38,7 +40,10 @@ class ViewController: NSViewController, DropZoneDelegate {
         
         if url.pathExtension! == "bmp" {
             
+            // change selectedImage
             selectedImage = NSImage(contentsOfURL: url)
+            
+            // UI
             imageView.image = selectedImage
             dragHereLabel.hidden = true
             
@@ -106,7 +111,7 @@ class ViewController: NSViewController, DropZoneDelegate {
                     
                     if posInCurrentValue == bitsPerItem {
                         
-                        // add to output string as hexadecimal with at least two digits
+                        // add to output string as hexadecimal with at least two digits, it still looks messy with more than 8 bits per array item
                         let valueString = String(currentValue, radix: 16)
                         output += countElements(valueString) == 1 && bitsPerItem > 4 ? "0x0\(valueString)" : "0x\(valueString)"
                         
