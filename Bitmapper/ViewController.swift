@@ -23,8 +23,8 @@ class ViewController: NSViewController, DropZoneDelegate {
         super.viewDidLoad()
 
         // setup dropView
-        dropView.registerForFileExtensions(["bmp"])
-        dropView.defaultDragOperation = .Copy
+        dropView.registerForFileExtensions(extensions: ["bmp"])
+        dropView.defaultDragOperation = .copy
         dropView.dropDelegate = self
         
     }
@@ -41,11 +41,11 @@ class ViewController: NSViewController, DropZoneDelegate {
         if url.pathExtension! == "bmp" {
             
             // change selectedImage
-            selectedImage = NSImage(contentsOfURL: url)
+            selectedImage = NSImage(contentsOf: url as URL)
             
             // UI
             imageView.image = selectedImage
-            dragHereLabel.hidden = true
+            dragHereLabel.isHidden = true
             
             // update window title
             view.window!.title = "Bitmap to C array: \(url.lastPathComponent!) (width: \(Int(selectedImage!.size.width)) height: \(Int(selectedImage!.size.height)))"
@@ -55,19 +55,18 @@ class ViewController: NSViewController, DropZoneDelegate {
     }
     
     private func valueForColor(color: NSColor) -> Int {
-        
         // if it is dark, return 1, and if it is light, return 0
         return color.whiteComponent < 0.5 ? 1 : 0
-        
+//        return color.brightnessComponent < 0.5 ? 1 : 0
     }
     
     func performDragOperation(info: NSDraggingInfo) -> Bool {
         
-        let urls = DropZoneView.fileUrlsFromDraggingInfo(info)
+        let urls = DropZoneView.fileUrlsFromDraggingInfo(info: info)
         
         if urls != nil && urls!.count > 0 {
             
-            getImageFromURL(urls![0])
+            getImageFromURL(url: urls![0])
             
         }
         
@@ -80,7 +79,7 @@ class ViewController: NSViewController, DropZoneDelegate {
         if let img = selectedImage {
             
             // get neccesary data: bitmaprep & dimensions
-            let rep = NSBitmapImageRep(data: img.TIFFRepresentation!)!
+            let rep = NSBitmapImageRep(data: img.tiffRepresentation!)!
             let height = Int(img.size.height)
             let width = Int(img.size.width)
         
@@ -103,18 +102,18 @@ class ViewController: NSViewController, DropZoneDelegate {
                     
                     // add 1 or 0 at correct position in currentValue
                     let lsl = bitsPerItem - posInCurrentValue - 1
-                    let bit = valueForColor(rep.colorAtX(col, y: row)!) << lsl
+                    let bit = valueForColor(color: rep.colorAt(x: col, y: row)!) << lsl
                     currentValue += bit
                     
                     
-                    posInCurrentValue++
+                    posInCurrentValue += 1
                     
                     if posInCurrentValue == bitsPerItem {
                         
                         // add to output string as hexadecimal with at least two digits, it still looks messy with more than 8 bits per array item
                         let valueString = String(currentValue, radix: 16)
-                        output += countElements(valueString) == 1 && bitsPerItem > 4 ? "0x0\(valueString)" : "0x\(valueString)"
-                        
+                        output += valueString.count == 1 && bitsPerItem > 4 ? "0x0\(valueString)" : "0x\(valueString)"
+
                         // if it isn't the last object, add a comma
                         if row != height-1 || col != width-1 { output += ", " }
                         
@@ -148,10 +147,10 @@ class ViewController: NSViewController, DropZoneDelegate {
         panel.allowsMultipleSelection = false
         panel.allowedFileTypes = ["bmp"]
         
-        panel.beginWithCompletionHandler( { (result) -> Void in
-            if result == NSFileHandlingPanelOKButton {
+        panel.begin( completionHandler: { (result) -> Void in
+            if result.rawValue == NSFileHandlingPanelOKButton {
                 
-                self.getImageFromURL(panel.URL!)
+                self.getImageFromURL(url: panel.url! as NSURL)
                 
             }
         })
@@ -161,9 +160,9 @@ class ViewController: NSViewController, DropZoneDelegate {
     @IBAction func copyOutput(sender: AnyObject) {
         
         // copy contents of textView to generalPasteBoard
-        let pasteBoard = NSPasteboard.generalPasteboard()
-        pasteBoard.declareTypes([NSStringPboardType], owner: nil)
-        pasteBoard.setString(textView.string!, forType: NSStringPboardType)
+        let pasteBoard = NSPasteboard.general
+        pasteBoard.declareTypes([NSPasteboard.PasteboardType.string], owner: nil)
+        pasteBoard.setString(textView.string, forType: NSPasteboard.PasteboardType.string)
         
     }
 }

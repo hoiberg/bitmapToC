@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -92,12 +94,15 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Bitmap to C array" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Bitmap to C array" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="561" y="417" width="482" height="244"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="480" height="295"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="Gik-yp-Rjg"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -144,7 +149,7 @@
                                 </constraints>
                             </customView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dSt-yD-tPP">
-                                <rect key="frame" x="14" y="180" width="82" height="32"/>
+                                <rect key="frame" x="13" y="181" width="84" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="r4h-3j-pgV"/>
                                 </constraints>
@@ -153,11 +158,11 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="openFile:" target="XfG-lQ-9wD" id="ZvN-kq-ULO"/>
+                                    <action selector="openFileWithSender:" target="XfG-lQ-9wD" id="bYn-1J-Ccb"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jev-lc-pJC">
-                                <rect key="frame" x="305" y="180" width="103" height="32"/>
+                                <rect key="frame" x="304" y="181" width="105" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="91" id="AyQ-hC-hVM"/>
                                 </constraints>
@@ -166,39 +171,37 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="convertBitmapToC:" target="XfG-lQ-9wD" id="kvG-ms-brv"/>
+                                    <action selector="convertBitmapToCWithSender:" target="XfG-lQ-9wD" id="Qm6-fX-ZjH"/>
                                 </connections>
                             </button>
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLJ-4q-PJ3">
-                                <rect key="frame" x="20" y="20" width="440" height="147"/>
-                                <clipView key="contentView" id="EGC-q4-tgm">
-                                    <rect key="frame" x="1" y="1" width="223" height="133"/>
+                                <rect key="frame" x="20" y="20" width="440" height="148"/>
+                                <clipView key="contentView" drawsBackground="NO" id="EGC-q4-tgm">
+                                    <rect key="frame" x="1" y="1" width="438" height="146"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView importsGraphics="NO" richText="NO" findStyle="bar" allowsUndo="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="Tyu-aH-0J9">
-                                            <rect key="frame" x="0.0" y="0.0" width="223" height="145"/>
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="bar" allowsUndo="YES" allowsNonContiguousLayout="YES" id="Tyu-aH-0J9">
+                                            <rect key="frame" x="0.0" y="0.0" width="438" height="146"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="438" height="145"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="438" height="146"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="438" height="145"/>
-                                            <size key="maxSize" width="463" height="10000000"/>
                                         </textView>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="w5L-mW-d3i">
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="w5L-mW-d3i">
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="07T-og-jnN">
-                                    <rect key="frame" x="224" y="1" width="15" height="133"/>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="07T-og-jnN">
+                                    <rect key="frame" x="423" y="1" width="16" height="146"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Fub-XI-qFX">
-                                <rect key="frame" x="246" y="184" width="60" height="26"/>
+                                <rect key="frame" x="246" y="185" width="60" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="IGR-Md-ilY"/>
                                     <constraint firstAttribute="width" constant="57" id="SVH-HJ-n4X"/>
@@ -215,7 +218,7 @@
                                 </comboBoxCell>
                             </comboBox>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PeQ-YM-wkA">
-                                <rect key="frame" x="112" y="190" width="128" height="17"/>
+                                <rect key="frame" x="112" y="191" width="128" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="124" id="0Lx-ni-iNv"/>
                                 </constraints>
@@ -226,7 +229,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v7h-r1-246">
-                                <rect key="frame" x="404" y="180" width="62" height="32"/>
+                                <rect key="frame" x="403" y="181" width="64" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="cwh-gj-21Y"/>
                                 </constraints>
@@ -235,7 +238,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="copyOutput:" target="XfG-lQ-9wD" id="1dZ-EC-U0L"/>
+                                    <action selector="copyOutputWithSender:" target="XfG-lQ-9wD" id="4BY-fA-i6a"/>
                                 </connections>
                             </button>
                         </subviews>
